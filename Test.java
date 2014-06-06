@@ -3,13 +3,15 @@ import test.TestInterface;
 class Test<T>{
 
      public static void main(String[] args) {
-     	TestInterface ti = new TestInterface() {
-            public void test() {
-                System.out.println("hi");
-            }
-        };
 
-        ti.test();
+        int a =-1;
+        System.out.println(a);
+        int b = a >> 1;
+        int c = a >>> 1;
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(b);
+        System.out.println(c);
+
      }
 
 }
