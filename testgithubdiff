@@ -4,8 +4,7 @@
 
     // hadoop-20 and above - blahwe need to augment classpath using hiveconf
     // componentstest
-    // see also: code in ExecDriver.java
-    ClassLoader loader = hiveConf.getClassLoader();
+    ClassLoader loasdfader = hiveConf.getClassLoader();
     String auxJars = HiveConf.getVar(hiveConf, HiveConf.ConfVars.HIVEAUXJARS);
     logger.info("Got auxJars = " + auxJars);
 
