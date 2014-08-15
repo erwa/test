@@ -1,2 +1,4 @@
-a = 'hi'
-println a
+a = "a"
+if (a) {
+  println "true"
+}

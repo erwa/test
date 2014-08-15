@@ -1,1 +1,8 @@
+/bin
+build
 *.class
+.classpath
+derby.log
+.gradle
+.project
+temp

@@ -1,8 +1,5 @@
-if [[ $1 != *.tar.gz ]]
-then
-  echo "not .tar.gz"
-else
-  echo "is .tar.gz"
-
-  echo ${1%.tar.gz}
-fi
+echo "hi"
+sleep 1
+echo "why"
+sleep 1
+echo "blah blah blah"

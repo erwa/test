@@ -1,0 +1,18 @@
+apply plugin: 'java'
+
+dependencies {
+  compile 'junit:junit:4.8.1'
+}
+
+repositories {
+  mavenCentral()
+}
+
+task foo (type: JavaExec) {
+  main "Test"
+  classpath files("build/classes/test")
+
+  doFirst {
+    systemProperty "foo", null
+  }
+}
