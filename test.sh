@@ -1,5 +1,7 @@
-echo "hi"
-sleep 1
-echo "why"
-sleep 1
-echo "blah blah blah"
+function a() {
+  echo "${1}"
+  echo ${!1}
+}
+
+a JAVA_HOME
+echo ${JAVA_HOME}
