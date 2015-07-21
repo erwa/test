@@ -1,4 +1,6 @@
-import java.io.File
+def job = "a"
 
-def a = [ new File("a"), new File("b") ]
-a.name.each{println it}
+print """
+test"foo"\${job}
+${job.length()}
+"""

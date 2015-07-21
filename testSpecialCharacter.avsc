@@ -1,0 +1,1 @@
+{"namespace": "test.avro",  "name": "testavro2",  "type": "record",  "fields": [    { "name":"a", "type":"string", "default":"default string", "doc":"This pound # breaks stuff?" }  ] }
