@@ -1,0 +1,27 @@
+import java.security.MessageDigest
+
+apply plugin: 'java'
+
+apply from: 'test.gradle'
+
+jar.enabled = false
+
+task bar << {
+  foo()
+  //println (new Date()).toString()
+}
+
+//println sourceSets.main.allSource
+
+task sourcesJar(type: Jar) {
+  classifier = 'sources'
+  from project(':testdir').sourceSets.main.allSource
+}
+
+/*
+task printSources {
+  sourceSets.main.allSource.each {
+    println it
+  }
+}
+*/

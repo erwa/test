@@ -1,0 +1,12 @@
+{
+  "namespace": "test",
+  "name": "avro_map_union",
+  "type": "record",
+  "fields": [ {
+    "name": "a",
+    "type": [{
+      "type": "map",
+      "values": "string"
+    }, null]
+  } ]
+}

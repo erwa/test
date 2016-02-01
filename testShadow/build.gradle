@@ -1,0 +1,36 @@
+evaluationDependsOn(':testdir')
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+buildscript {
+  repositories {
+    mavenCentral()
+    jcenter()
+  }
+  dependencies {
+    classpath 'com.github.jengelman.gradle.plugins:shadow:1.2.1'
+  }
+}
+
+dependencies {
+  compile project(':testdir')
+}
+
+jar.enabled = false
+
+shadowJar {
+  relocate 'java', 'shadow'
+}
+
+/*
+task sourcesJar(type: Jar, dependsOn: ":testdir:compileJava") {
+  classifier = 'sources'
+  from project(':testdir').sourceSets.main.allSource
+}
+*/
+
+task sourcesJar(type: Jar) {
+  classifier = 'sources'
+  from project(':testdir').sourceSets.main.allJava
+}

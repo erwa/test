@@ -1,9 +1,12 @@
-/bin
-build
 *.class
+*.sublime-*
+.DS_Store
 .classpath
-derby.log
 .gradle
 .project
 .settings/
+/bin
+build
+derby.log
+doc/
 temp

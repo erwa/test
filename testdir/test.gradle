@@ -1,0 +1,13 @@
+ext.foo = {
+  println "${version}"
+  println "${protobufVersion}"
+
+  /*
+  ant.propertyfile(file: new File("common-version-info.properties")) {
+    entry(key: "version", value: "FOO")
+  }
+  */
+
+
+  println sourceSets.main.output.resourcesDir
+}
