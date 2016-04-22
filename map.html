@@ -1,0 +1,84 @@
+<html>
+<body>
+<div id="map-canvas" style="width: 1200px; height: 890px;"></div>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script>
+var geocoder;
+var map;
+
+function initialize()
+{
+  // Create an array of styles.
+  var styles = [
+    // Blue, thin roads
+    {
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [
+        { visibility: "simplified" },
+        { color: '#008fce' }
+      ]
+    },
+
+    // Green buildings
+    {
+      featureType: 'landscape',
+      elementType: 'geometry',
+      stylers: [
+        { hue: '#00ff00' },
+        { lightness: -15 },
+        { saturation: 99 }
+      ]
+    },
+
+    // Orange terrain
+    {
+      featureType: 'poi',
+      elementType: 'geometry',
+      stylers: [
+        { hue: '#f9651f' },
+        { lightness: -15 },
+        { saturation: 99 }
+      ]
+    },
+
+    // Turn off non-road labels
+    {
+      featureType: "administrative",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    },
+    {
+      featureType: "poi",
+      elementType: "labels",
+      stylers: [
+        { visibility: "off" }
+      ]
+    }
+  ];
+
+  // Create a new StyledMapType object, passing it the array of styles,
+  // as well as the name to be displayed on the map type control.
+  var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Styled Map"});
+
+  var mapOptions = {
+    zoom: 16,
+    center: new google.maps.LatLng(37.43151, -122.16947),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+
+  // Let's draw the map
+  map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+  //Associate the styled map with the MapTypeId and set it to display.
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
+}
+
+initialize();
+</script>
+</body>
+</html>
