@@ -4,4 +4,12 @@
 #EXT-X-TARGETDURATION:10
 #EXTINF:10.000,
 https://test-streams.mux.dev/x36xhzz/url_2/url_526/193039199_mp4_h264_aac_ld_7.ts
+#EXTINF:10.000,
+https://test-streams.mux.dev/x36xhzz/url_2/url_527/193039199_mp4_h264_aac_ld_7.ts
+#EXTINF:5.000,
+fakenonexistent.ts
+#EXTINF:10.000,
+https://test-streams.mux.dev/x36xhzz/url_2/url_528/193039199_mp4_h264_aac_ld_7.ts
+#EXTINF:10.000,
+https://test-streams.mux.dev/x36xhzz/url_2/url_529/193039199_mp4_h264_aac_ld_7.ts
 #EXT-X-ENDLIST
