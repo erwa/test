@@ -1,5 +1,10 @@
+*.aux
 *.class
+*.dvi
+*.log
+*.pdf
 *.sublime-*
+*.synctex.gz
 .DS_Store
 .classpath
 .gradle
