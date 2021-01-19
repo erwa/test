@@ -1,6 +1,9 @@
 #!/usr/bin/python -u
 # -u flag causes streams to skip buffering
-import os
 
-for a,b,c in os.walk('.'):
-  print a
+try:
+    print('raising')
+    raise RuntimeError('foo')
+except Exception as e:
+    print('caught')
+    print(e)

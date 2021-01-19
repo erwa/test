@@ -11,6 +11,7 @@
 .project
 .settings/
 /bin
+a.out
 build
 derby.log
 doc/
