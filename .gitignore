@@ -10,9 +10,11 @@
 .gradle
 .project
 .settings/
+.vs*
 /bin
 a.out
 build
 derby.log
 doc/
 temp
+test
